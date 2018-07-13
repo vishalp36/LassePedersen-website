@@ -3,9 +3,31 @@ body {
     color: white;
 }
 
-.main-nav{
-    margin: 10px;
-    border-radius: 5px;
+/* Highlighting rules for nav menu items */
+.main-nav li a {
+    color: white;
+}
+.main-nav li a.active,
+.main-nav li a.active:hover,
+.main-nav li a.active:focus,
+.main-nav li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .navbar-toggle {
+        border-color: white;
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+}
+
+/*
+.main-nav {
+    font-size: 20px;
 }
 
 .main-nav a{
@@ -15,9 +37,5 @@ body {
 .nav > li > a:hover,
 .nav > li > a:focus,
 .nav > li > a:active{
-    background-color: rgb(40,40,40);
-}
-
-.navbar-toggle-icon{
-    color: white;
-}
+    background-color: rgb(50,50,50);
+}*/

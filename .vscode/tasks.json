@@ -7,7 +7,16 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/LassePedersen-website.csproj"
+                "${workspaceFolder}/React.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "run",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run"
             ],
             "problemMatcher": "$msCompile"
         }

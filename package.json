@@ -1,14 +1,15 @@
 {
-  "name": "LassePedersen_website",
+  "name": "React",
   "private": true,
   "version": "0.0.0",
   "devDependencies": {
     "@types/history": "4.6.0",
-    "@types/react": "15.0.35",
+    "@types/react": "^15.0.35",
     "@types/react-dom": "15.5.1",
     "@types/react-hot-loader": "3.0.3",
     "@types/react-router": "4.0.12",
     "@types/react-router-dom": "4.0.5",
+    "@types/showdown": "^1.7.4",
     "@types/webpack-env": "1.13.0",
     "aspnet-webpack": "^2.0.1",
     "aspnet-webpack-react": "^3.0.0",
@@ -19,7 +20,7 @@
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "0.11.2",
     "isomorphic-fetch": "2.2.1",
-    "jquery": "3.2.1",
+    "jquery": "^3.2.1",
     "json-loader": "0.5.4",
     "react": "15.6.1",
     "react-dom": "15.6.1",
@@ -30,5 +31,9 @@
     "url-loader": "0.5.9",
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.2"
+  },
+  "dependencies": {
+    "npm": "^6.1.0",
+    "showdown": "^1.8.6"
   }
 }
