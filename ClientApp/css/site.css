@@ -1,6 +1,11 @@
 body {
     background-color: rgb(32,32,32);
+    font-family: 'Open Sans';
     color: white;
+}
+
+.main-nav {
+    z-index: 1;
 }
 
 /* Highlighting rules for nav menu items */
@@ -27,8 +32,8 @@ body {
 
 @media (min-width: 768px) {
     .navbar-collapse {
-        padding-left: 25%;
-        padding-right: 25%;
+        padding-left: 12.5%;
+        padding-right: 12.5%;
     }
 
     .navbar-nav {
@@ -39,4 +44,32 @@ body {
         width: 25%;
         text-align: center;
     }
+}
+
+.content {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+#welcome {
+    position: relative;
+    display: block;
+    top: 10vh;
+}
+
+#welcome img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+#welcome p{
+    margin-top: 5%;
+    font-size: 1.2em;
+}
+
+.work-block {
+    background-color: lightgray;
+    color: black;
+    margin-bottom: 1vh;
 }

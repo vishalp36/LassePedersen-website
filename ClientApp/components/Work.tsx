@@ -1,11 +1,49 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
+import * as showdown from 'showdown';
 
-export class Work extends React.Component<RouteComponentProps<{}>, {}> {
+interface WorkState {
+    Documents: string[];
+}
+
+export class Work extends React.Component<RouteComponentProps<{}>, WorkState> {
+
+    constructor() {
+        super();
+        this.state = { Documents: [] }
+    }
+
+    componentDidMount() {
+        fetch('api/Work/GetAllWork')
+            .then(response => response.json())
+            .then(data => {
+                for (let entry of data) {
+                    fetch('/' + entry)
+                    .then(respone => respone.text())
+                    .then(data => {
+                        var temp = this.state.Documents;
+                        temp.push(data);
+                        this.setState({ Documents: temp });
+                    })
+                }
+            });
+    }
+
+    md(markdown: string) {
+        const converter = new showdown.Converter();        
+        return { __html: converter.makeHtml(markdown) }
+    }
+
     render() {
+        const state = this.state;
         return(
-            <div>
+            <div className='content'>
                 <h1>Work</h1>
+                    {state.Documents.map(file => (
+                        <div className='row work-block'>
+                            <div className='col-sm-12' dangerouslySetInnerHTML={this.md(file)}></div>
+                        </div>
+                    ))}
             </div>
         )
     }

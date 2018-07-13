@@ -4,7 +4,7 @@ import { RouteComponentProps } from 'react-router';
 export class About extends React.Component<RouteComponentProps<{}>, {}> {
     render() {
         return(
-            <div>
+            <div className='content'>
                 <h1>About</h1>
             </div>
         )
