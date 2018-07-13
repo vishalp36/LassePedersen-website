@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace React.Controllers
+namespace LassePedersen_website.Controllers
 {
     public class HomeController : Controller
     {
