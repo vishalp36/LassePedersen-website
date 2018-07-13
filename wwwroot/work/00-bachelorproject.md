@@ -23,4 +23,6 @@ locating where energy is wasted.
 ---
 The software was programmed using Python, but requires some C++ build tool to compile and run the graphical user interface.
 
-Please have a look at the GitHub repository for more information [![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/PowerConsumptionPredictor)
+Please have a look at the GitHub repository for more information.
+
+[![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/PowerConsumptionPredictor)
