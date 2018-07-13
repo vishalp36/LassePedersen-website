@@ -25,17 +25,18 @@ body {
     }
 }
 
-/*
-.main-nav {
-    font-size: 20px;
-}
+@media (min-width: 768px) {
+    .navbar-collapse {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
 
-.main-nav a{
-    color: white;
-}
+    .navbar-nav {
+        width: 100%;
+    }
 
-.nav > li > a:hover,
-.nav > li > a:focus,
-.nav > li > a:active{
-    background-color: rgb(50,50,50);
-}*/
+    .navbar-nav > li {
+        width: 25%;
+        text-align: center;
+    }
+}
