@@ -79,3 +79,27 @@ body {
     color: black;
     margin-bottom: 1vh;
 }
+
+.sorting {
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.sorting label{
+    float: right;
+    width: 100%;
+    min-width: 103px;
+}
+
+.sorting-select {
+    margin-top: 2px;
+    margin-bottom: 15px;
+    width: 100%;
+    min-width: 103px;
+    background-color: transparent;
+    float: right;
+}
+
+.sorting-select > option {
+    background-color: #555;
+}

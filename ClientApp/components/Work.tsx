@@ -11,6 +11,7 @@ export class Work extends React.Component<RouteComponentProps<{}>, WorkState> {
     constructor() {
         super();
         this.state = { Documents: [] }
+        this.changeOrder = this.changeOrder.bind(this);
     }
 
     componentDidMount() {
@@ -34,11 +35,30 @@ export class Work extends React.Component<RouteComponentProps<{}>, WorkState> {
         return { __html: converter.makeHtml(markdown) }
     }
 
+    changeOrder() {
+        let state = this.state;
+        state.Documents.reverse();
+        this.setState({ Documents: state.Documents });
+
+        this.render()
+    }
+
     render() {
         const state = this.state;
         return(
             <div className='content'>
-                <h1>Work</h1>
+                <div className='row'>
+                    <div className='col-sm-10'>
+                        <h1>Work</h1>
+                    </div>
+                    <div className='col-sm-2 sorting'>
+                        <label>Sort by</label>
+                        <select id='work-sort' className='sorting-select' onChange={this.changeOrder}>
+                            <option value='Newest first'>Newest first</option>
+                            <option value='Oldest first' selected>Oldest first</option>
+                        </select>
+                    </div>
+                </div>
                     {state.Documents.map((file, index) => (
                         <div key={index} className='row work-block'>
                             <div className='col-sm-12' dangerouslySetInnerHTML={this.md(file)}></div>
