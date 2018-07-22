@@ -16,8 +16,8 @@ export class Blog extends React.Component<RouteComponentProps<{}>, BlogState> {
         fetch('api/Blog/GetAllPosts')
             .then(response => response.json())
             .then(data => {
-                for (let entry of data) {
-                    fetch('/' + entry)
+                for (let i = 0; i < data.length; i++) {
+                    fetch(data[i])
                     .then(respone => respone.text())
                     .then(data => {
                         var temp = this.state.Posts;
@@ -38,8 +38,8 @@ export class Blog extends React.Component<RouteComponentProps<{}>, BlogState> {
         return(
             <div className='content'>
                 <h1>Blog</h1>
-                    {state.Posts.map(file => (
-                        <div className='row blog-block'>
+                    {state.Posts.map((file, index) => (
+                        <div key={index} className='row blog-block'>
                             <div className='col-sm-12' dangerouslySetInnerHTML={this.md(file)}></div>
                         </div>
                     ))}

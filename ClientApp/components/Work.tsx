@@ -17,8 +17,8 @@ export class Work extends React.Component<RouteComponentProps<{}>, WorkState> {
         fetch('api/Work/GetAllWork')
             .then(response => response.json())
             .then(data => {
-                for (let entry of data) {
-                    fetch('/' + entry)
+                for (let i = 0; i < data.length; i++) {
+                    fetch(data[i])
                     .then(respone => respone.text())
                     .then(data => {
                         var temp = this.state.Documents;
@@ -39,8 +39,8 @@ export class Work extends React.Component<RouteComponentProps<{}>, WorkState> {
         return(
             <div className='content'>
                 <h1>Work</h1>
-                    {state.Documents.map(file => (
-                        <div className='row work-block'>
+                    {state.Documents.map((file, index) => (
+                        <div key={index} className='row work-block'>
                             <div className='col-sm-12' dangerouslySetInnerHTML={this.md(file)}></div>
                         </div>
                     ))}
