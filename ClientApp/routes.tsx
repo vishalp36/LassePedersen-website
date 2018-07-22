@@ -6,7 +6,6 @@ import { Work } from './components/Work';
 import { Blog } from './components/Blog';
 import { About } from './components/About';
 
-import { EmptyLayout } from './components/EmptyLayout';
 import { Pathfinder } from './components/pathfinder/PathfinderHome';
 
 export const routes = <Layout>
@@ -14,8 +13,5 @@ export const routes = <Layout>
     <Route exact path='/work' component={ Work } />
     <Route exact path='/blog' component={ Blog } />
     <Route exact path='/about' component={ About } />
-</Layout>;
-
-export const eRoutes = <EmptyLayout>
     <Route exact path='/pathfinder' component={ Pathfinder } />
-</EmptyLayout>
+</Layout>;

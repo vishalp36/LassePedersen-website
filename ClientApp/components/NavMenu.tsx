@@ -31,6 +31,17 @@ export class NavMenu extends React.Component<{}, {}> {
                         <li>
                             <NavLink to={'/about'} activeClassName='active'>About</NavLink>
                         </li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Online
+                            </a>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <NavLink to={'/pathfinder'} activeClassName='active' className='dropdown-item'>Pathfinder</NavLink>
+                                </li>
+                                <li><a className="dropdown-item" href="#">Action</a></li>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
