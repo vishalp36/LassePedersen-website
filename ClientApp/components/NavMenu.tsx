@@ -39,7 +39,6 @@ export class NavMenu extends React.Component<{}, {}> {
                                 <li>
                                     <NavLink to={'/pathfinder'} activeClassName='active' className='dropdown-item'>Pathfinder</NavLink>
                                 </li>
-                                <li><a className="dropdown-item" href="#">Action</a></li>
                             </div>
                         </li>
                     </ul>

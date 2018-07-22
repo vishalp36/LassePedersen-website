@@ -1,0 +1,109 @@
+@media (max-width: 767px) {
+    .charactersheet-area {
+        margin-left: -15%;
+        margin-right: -15%;
+    }
+}
+
+@media (min-width: 768px) {
+    .charactersheet-area {
+        margin-left: -15%;
+        margin-right: -15%;
+    }
+
+    .character-basics div,
+    .character-abilities div,
+    .hp-and-init div,
+    .armor-class div {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+.charactersheet-area {
+    background-color: white;
+    padding: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    color: black;
+}
+
+.charactersheet-area input {
+    width: 100%;
+}
+
+#pathfinder-logo {
+    width: 100%;
+}
+
+.black-div {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin-bottom: 1vh;
+}
+.black-div h4 {
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+
+.black-div label {
+    margin-bottom: 0;
+}
+
+input[type='number'] {
+    text-align: center;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.character-basics input{
+    font-size: 1.2em;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.character-basics label {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.character-abilities {
+    text-align: center;
+}
+
+.character-abilities label {
+    font-size: 0.2em;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.hp-and-init {
+    text-align: center;
+}
+
+.hp-and-init label {
+    font-size: 0.2em;
+    font-weight: normal;
+}
+
+.hp-and-init textarea {
+    width: 100%;
+    resize: none;
+}
+
+.armor-class {
+    text-align: center;
+}
+
+.armor-class label {
+    font-size: 0.2em;
+    font-weight: normal;
+}
+
+.armor-class input[type='number'] {
+    text-align: center;
+}

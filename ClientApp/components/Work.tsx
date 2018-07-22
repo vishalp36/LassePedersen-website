@@ -53,9 +53,9 @@ export class Work extends React.Component<RouteComponentProps<{}>, WorkState> {
                     </div>
                     <div className='col-sm-2 sorting'>
                         <label>Sort by</label>
-                        <select id='work-sort' className='sorting-select' onChange={this.changeOrder}>
+                        <select id='work-sort' className='sorting-select' defaultValue='Oldest first' onChange={this.changeOrder}>
                             <option value='Newest first'>Newest first</option>
-                            <option value='Oldest first' selected>Oldest first</option>
+                            <option value='Oldest first'>Oldest first</option>
                         </select>
                     </div>
                 </div>

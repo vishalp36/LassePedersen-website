@@ -31,7 +31,7 @@ body {
     border: #555 solid 1px;
 }
 
-.dropdown-menu > li > a {
+.dropdown-menu a {
     line-height: 2;
 }
 
