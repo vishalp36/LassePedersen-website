@@ -19,15 +19,17 @@ export class Work extends React.Component<RouteComponentProps<{}>, WorkState> {
             .then(response => response.json())
             .then(data => {
                 for (let i = 0; i < data.length; i++) {
+                    let index = parseInt(String(data[i]).substring(5,7));
                     fetch(data[i])
                     .then(respone => respone.text())
                     .then(data => {
-                        var temp = this.state.Documents;
-                        temp.push(data);
+                        let temp = this.state.Documents;
+                        temp[index] = data;
                         this.setState({ Documents: temp });
                     })
                 }
             });
+        
     }
 
     md(markdown: string) {

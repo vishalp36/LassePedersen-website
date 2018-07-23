@@ -18,11 +18,12 @@ export class Blog extends React.Component<RouteComponentProps<{}>, BlogState> {
             .then(response => response.json())
             .then(data => {
                 for (let i = 0; i < data.length; i++) {
+                    let index = parseInt(String(data[i]).substring(5,7));
                     fetch(data[i])
                     .then(respone => respone.text())
                     .then(data => {
                         var temp = this.state.Posts;
-                        temp.push(data);
+                        temp[index] = data;
                         temp.reverse();
                         this.setState({ Posts: temp });
                     })
