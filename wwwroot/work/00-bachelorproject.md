@@ -25,4 +25,4 @@ The software was programmed using Python, but requires some C++ build tool to co
 
 Please have a look at the GitHub repository for more information.
 
-[![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/PowerConsumptionPredictor)
+[![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/PowerConsumptionPredictor) <https://github.com/LasToPe/PowerConsumptionPredictor>

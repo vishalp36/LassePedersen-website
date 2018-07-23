@@ -118,3 +118,8 @@ body {
 .sorting-select > option {
     background-color: #555;
 }
+
+.contact-logo {
+    font-size: 34px;
+    font-weight: bold;
+}

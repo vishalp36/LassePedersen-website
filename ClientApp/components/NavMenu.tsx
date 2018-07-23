@@ -29,7 +29,7 @@ export class NavMenu extends React.Component<{}, {}> {
                             <NavLink to={'/blog'} activeClassName='active'>Blog</NavLink>
                         </li>
                         <li>
-                            <NavLink to={'/about'} activeClassName='active'>About</NavLink>
+                            <NavLink to={'/contact'} activeClassName='active'>Contact</NavLink>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

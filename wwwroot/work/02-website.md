@@ -9,4 +9,4 @@ Just remember to give credit if you copy directly.
 
 For the source please have a look at the GitHub repository.
 
-[![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/LassePedersen-website)
+[![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/LassePedersen-website) <https://github.com/LasToPe/LassePedersen-website>

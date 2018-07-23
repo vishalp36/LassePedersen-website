@@ -9,4 +9,4 @@ making it for the new system, with the smaller number of items to be implemented
 
 Source and references are on GitHub.
 
-[![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/Character-Builder)
+[![github](/images/GitHub-Mark-32px.png)](https://github.com/LasToPe/Character-Builder) <https://github.com/LasToPe/Character-Builder>
