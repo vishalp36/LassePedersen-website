@@ -1,24 +1,24 @@
-@media (max-width: 767px) {
+@media print {
+    body * {visibility: hidden;}
+    .charactersheet-area, .charactersheet-area * {visibility: visible;}
     .charactersheet-area {
-        margin-left: -15%;
-        margin-right: -15%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width:100%;
     }
 }
 
-@media (min-width: 768px) {
-    .charactersheet-area {
-        margin-left: -15%;
-        margin-right: -15%;
-    }
-
-    .character-basics div,
-    .character-abilities div,
-    .hp-and-init div,
-    .armor-class div {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
+.container .charactersheet-area {
+    width: 1112px !important;
 }
+
+.charactersheet-area {
+    margin-left: -20%;
+    margin-right: -20%;
+    overflow: hidden;
+}
+
 .charactersheet-area {
     background-color: white;
     padding: 2%;
@@ -39,7 +39,10 @@
     display: inline-block;
     background-color: black;
     color: white;
+    outline: 1px solid black;
+    outline-offset: -1px;
     margin-bottom: 1vh;
+    text-align: center;
 }
 .black-div h4 {
     margin-top: 0;
@@ -50,7 +53,24 @@
     margin-bottom: 0;
 }
 
-input[type='number'] {
+.character-basics div,
+.character-abilities div,
+.hp-and-init div,
+.armor-class div,
+.saves div,
+.bab-cmb-cmd div,
+.weapons div,
+.speed div {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+input {
+    border: 1px solid black;
+}
+
+input[type='number'],
+input[type='text'] {
     text-align: center;
 }
 
@@ -60,9 +80,19 @@ input[type='number']::-webkit-outer-spin-button {
     margin: 0;
 }
 
+textarea {
+    border: 1px solid black;
+}
+
+label {
+    font-size: 0.2em;
+    font-weight: normal;
+}
+
 .character-basics input{
     font-size: 1.2em;
     border: none;
+    text-align: left;
     border-bottom: 1px solid black;
 }
 
@@ -76,18 +106,11 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .character-abilities label {
-    font-size: 0.2em;
-    font-weight: normal;
     margin-bottom: 0;
 }
 
 .hp-and-init {
     text-align: center;
-}
-
-.hp-and-init label {
-    font-size: 0.2em;
-    font-weight: normal;
 }
 
 .hp-and-init textarea {
@@ -99,11 +122,105 @@ input[type='number']::-webkit-outer-spin-button {
     text-align: center;
 }
 
-.armor-class label {
-    font-size: 0.2em;
-    font-weight: normal;
+.armor-class input[type='text'] {
+    text-align: initial;
 }
 
-.armor-class input[type='number'] {
+.saves {
     text-align: center;
+}
+
+.saves .rows {
+    margin-left: -2%;
+    margin-right: -2%;
+}
+
+.saves .col-xs-8 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.saves textarea {
+    width: 100%;
+    height: 135px;
+    resize: none;
+}
+
+.bab-cmb-cmd {
+    text-align: center;
+}
+
+.bab-cmb-cmd h4 {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.bab-cmb-cmd textarea {
+    width: 100%;
+    resize: none;
+}
+
+.weapons > div {
+    margin-bottom: 2vh;
+}
+
+.weapons .black-div {
+    margin-bottom: 0;
+}
+
+.weapons .black-div.ab,
+.weapons .black-div.crit {
+    top: 6px;
+}
+
+.weapons h4, h6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.weapons .input {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.weapons .input input {
+    text-align: center;
+}
+
+.speed,
+.speed input {
+    text-align: center;
+}
+
+.speed .double input {
+    width: 40%;
+}
+
+.speed input {
+    width: 75%;
+    float: left;
+}
+
+.speed textarea {
+    width: 100%;
+    height: 75px;
+    resize: none;
+}
+
+.speed .black-div label {
+    float: none;
+}
+
+.speed label {
+    float: left;
+}
+
+#fly-label {
+    margin-left: 4%;
+    text-align: left;
+    float: left;
+}
+#maneuverability-label {
+    margin-right: 5%;
+    float: right;
 }
